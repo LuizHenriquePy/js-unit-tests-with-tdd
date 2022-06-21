@@ -12,6 +12,7 @@
 
 */
 
+// Função desenvolvida por Luiz Henrique
 const average = (array) => {
   if (!Array.isArray(array) || array.length === 0) { return undefined; }
   if (array.find((element) => typeof element !== 'number') !== undefined) { return undefined; }
