@@ -35,8 +35,9 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
     expect(typeof productDetails).toEqual('function');
     expect(typeof array).toEqual('object');
     expect(array.length).toBe(2);
-    expect(array.find(element => typeof element !== 'object')).toBeUndefined();
+    expect(array.every(element => typeof element === 'object')).toBeTruthy();
     expect(array[0].name !== array[1].name).toBeTruthy();
-    expect(array[0].details.productId.indexOf('123') !== -1 && array[1].details.productId.indexOf('123') !== -1).toBeTruthy();
+    expect(array[0].details.productId.indexOf('123') !== -1).toBeTruthy();
+    expect(array[1].details.productId.indexOf('123') !== -1).toBeTruthy();
   });
 });
