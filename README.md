@@ -6,7 +6,8 @@
 
 - Jest - Desenvolvimento dos testes
 - NPM - Gerenciamento de pacotes e criação de scripts
-- JavaScript - Desenvolvimento das funções 
+- JavaScript - Desenvolvimento das funções
+- ESLint - Padronização do código
 
 # Como executar o projeto
 ### Baixar localmente:
@@ -25,6 +26,10 @@ npm run test
 ou
 ```
 npm test <nome do arquivo>
+```
+### Executar o ESLint:
+```
+npm run lint
 ```
 
 ## AVISO:
