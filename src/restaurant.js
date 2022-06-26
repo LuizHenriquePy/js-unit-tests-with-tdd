@@ -100,23 +100,14 @@ const createMenu = (products) => {
   restaurant.consumption = [];
   restaurant.order = (request) => restaurant.consumption.push(request);
   restaurant.pay = () => {
-    const types = Object.entries(products);
     const productsAndValues = [];
-      for (let type of types) {
-        const values = Object.entries(type[1]);
-        productsAndValues.push(...values);
-      }
+    Object.entries(products).forEach((element) => productsAndValues.push(...Object.entries(element[1])));
 
-    let cont = 0;
-    for (let product of restaurant.consumption) {
-      for (let value of productsAndValues) {
-        if (product === value[0]) {
-          cont += value[1];
-        }
-      }
-    }
-    cont += cont * 0.1;
-    return cont;
+    return restaurant.consumption.reduce((value, order) => {
+      let product = productsAndValues.find((elem) => elem[0] === order);
+      if (product) { return product[1] + value; }
+      return value;
+    }, 0) * 1.1;
   };
   return restaurant;
 };
