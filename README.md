@@ -2,6 +2,10 @@
 
 É uma aplicação criada por Luiz Henrique durante o curso da Trybe. O objetivo é treinar o desenvolvimento de testes e o uso da metodologia TDD. O código consiste em pequenas funções com testes.
 
+# Desafios e aprendizado
+
+Durante o desenvolvimento desse projeto tive que pensar em todas as possíveis entradas e saídas de cada função para conseguir desenvolver o melhor teste. A maior dificuldade foi encontrar os matchers corretos para cada teste feito. Isso custou horas lendo a documentação oficial do Jest, mas como consequência gerou bastante aprendizado sobre o framework.
+
 # Tecnologias usadas
 
 - Jest - Desenvolvimento dos testes
